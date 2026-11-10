@@ -4,7 +4,13 @@ import { education, experience } from "../data/portfolio";
 import Reveal from "./Reveal";
 import SectionTitle from "./SectionTitle";
 
-type Item = { title: string; place: string; period: string; points: string[] };
+type Item = {
+  title: string;
+  place: string;
+  period: string;
+  url?: string;
+  points: string[];
+};
 
 function Timeline({ items, Icon }: { items: Item[]; Icon: IconType }) {
   return (
@@ -23,9 +29,20 @@ function Timeline({ items, Icon }: { items: Item[]; Icon: IconType }) {
             <h3 className="mt-3 text-lg font-semibold text-slate-900 dark:text-white">
               {it.title}
             </h3>
-            <p className="text-sm font-medium text-teal-600 dark:text-teal-400">
-              {it.place}
-            </p>
+            {it.url ? (
+              <a
+                href={it.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-teal-600 dark:text-teal-400 hover:text-primary transition-colors"
+              >
+                {it.place}
+              </a>
+            ) : (
+              <span className="text-sm font-medium text-teal-600 dark:text-teal-400">
+                {it.place}
+              </span>
+            )}
             <ul className="mt-3 list-disc space-y-1 pl-5 text-sm">
               {it.points.map((p) => (
                 <li key={p}>{p}</li>

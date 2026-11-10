@@ -34,12 +34,14 @@ export const about = {
   ],
   hobbies: [
     "Teaching & Mentoring",
-    "Reading",
+    "Reading Islamic & Educational Books",
     "Exploring New Technologies",
+    "Web Development",
     "Problem Solving",
+    "Learning New Skills",
   ],
   facts: [
-    { value: "3+", label: "Full-stack projects" },
+    { value: "4+", label: "Full-stack projects" },
     { value: "20+", label: "Technologies & tools" },
     { value: "100%", label: "Passion for learning" },
   ],
@@ -93,15 +95,20 @@ export const learning = [
 
 export const education = [
   {
-    title: "Your Degree / Program Name",
-    place: "Your University / Institute",
-    period: "20XX – 20XX",
-    points: [
-      "Replace this with your real education details (degree, subject, result).",
-    ],
+    title: "Takmil (Dawra-e-Hadith)",
+    place: "Jamia Arabia Nuria Mogorkhal Madrasa",
+    url: "https://jamianuria.com/",
+    period: "2022 - 23",
+    points: ["Completed Takmil (Dawra-e-Hadith) in Islamic Studies."],
+  },
+  {
+    title: "Ifta (Specialization in Islamic Jurisprudence)",
+    place: "Markazul Fikri Wad Dawah",
+    url: "https://www.markazulfikri.shop/",
+    period: "2023 - 24",
+    points: ["Completed specialization in Islamic Jurisprudence (Ifta)."],
   },
 ];
-
 export const experience = [
   {
     title: "Teacher",
